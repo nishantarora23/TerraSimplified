@@ -22,3 +22,8 @@ variable "private_subnets" {
   description = "List of CIDR blocks for private subnets"
   type        = list(string)
 }
+
+variable "allowed_ssh_ip" {
+  description = "Allowed IP address for security group"
+  type        = string
+}
