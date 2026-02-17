@@ -27,3 +27,8 @@ variable "allowed_ssh_ip" {
   description = "Allowed IP address for security group"
   type        = string
 }
+
+variable "instance_type" {
+  description = "Instance type of the EC2 instance"
+  type        = string
+}

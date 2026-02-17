@@ -27,5 +27,6 @@ module "web_sg" {
 
   tags = {
     Environment = var.environment
+    Terraform   = "true"
   }
 }

@@ -18,3 +18,12 @@ module "security" {
   environment    = var.environment
   allowed_ssh_ip = var.allowed_ssh_ip
 }
+
+module "webserver" {
+  source = "./modules/ec2"
+
+  subnet_id         = module.vpc.public_subnet_ids[0]
+  security_group_id = module.security.security_group_id
+  instance_type     = var.instance_type
+  environment       = var.environment
+}
